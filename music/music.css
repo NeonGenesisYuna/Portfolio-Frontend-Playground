@@ -7,6 +7,7 @@ body{
     margin: 0;
     height: 100vh;
     overflow-y: scroll;
+    overflow-x: clip;
 }
 .header{
     color: white;
@@ -209,6 +210,49 @@ a{
     margin-left: 890px;
     width: 10px;
     height: 200px;
-    margin-top: -220px
-
+    margin-top: -220px;
+    }
+    .musicdiv{
+    margin-top: -20px;
+}
+    .welcome{
+        margin-bottom: 70px;
+    }
+}
+.text1{
+    text-align: center;
+    color: white;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 40px;
+}
+.text2{
+    color: white;
+    font-family: "Jesefin Sans", sans-serif;
+    font-size: 20px;
+    margin-left: 145px;
+    margin-right: 215px;
+    text-align: center;
+}
+.text3{
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    font-family: "Jesefin Sans", sans-serif;
+    margin-top: 100px;
+}
+.artimg{
+    height: 300px;
+    width: 300px;
+}
+.artlist{
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    margin-top: -20px;
+}
+.artists{
+    margin-top: 70px;
+    margin-bottom: 50px;
 }
