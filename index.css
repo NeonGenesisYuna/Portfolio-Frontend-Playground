@@ -1,0 +1,63 @@
+body{
+    background-image: url(/imgs/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    height: 100vh;
+    overflow-y: scroll;
+}
+.header{
+    color: white;
+    text-align: center;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 30px;
+    -webkit-text-stroke: 1px purple;
+    gap: 0;
+}
+.header h1 {
+    color: white;
+    font-family: "Josefin Sans", sans-serif;
+    -webkit-text-stroke: 1px purple;
+    margin: 20px;                       
+}
+
+.header h2 {
+    color: white;
+    font-family: "Josefin Sans", sans-serif;
+    margin: 30px;
+    
+}
+.student{
+    margin: 0;
+    line-height: 50px;
+}
+.links ul{
+    list-style-type: none;
+    font-size: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    font-family: "Josefin Sans", sans-serif;
+    line-height: 80px
+}
+
+.links a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+.links a:hover {
+    background-color: white;
+    color: black;
+}
+@media (max-width: 1280px){
+    .header h1{
+        font-size: 50px;
+    }
+    .header h2{
+        font-size: 30px;
+    }
+}
