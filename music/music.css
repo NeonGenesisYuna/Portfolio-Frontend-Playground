@@ -73,20 +73,14 @@ body{
 .music{
     color: white;
     font-family: "Josefin Sans", sans-serif;
-    
 }
 .welcome{
-    text-align: left;
-    margin-left: 242px;
-    margin-top: 60px;
+    text-align: center;
 }
 .imagelink{
     justify-content: space-evenly;
-    height: 300px;
-    width: 300px;
-    max-height: 300px;
-    max-width: 300px;
-    margin-left: 242px;
+    height: 30vw;
+    width: auto;
 }
 .musicdiv{
     margin-top: 100px;
@@ -145,120 +139,44 @@ a{
     height: 200px;
     margin-top: -220px
 }
-@media (max-width: 1280px) {
-    .imagelink {
-        width: 200px;
-        height: 200px;
-    }
 
-    .vc, .vc2, .vc3, .vc4, .vc5, .vc6, .vc7, .vc8, .vc9 {
-        font-size: 16px; 
-        
-    }
-    
-    .welcome{
-    text-align: left;
-    margin-left: 138px;
-    margin-top: 60px;
-}
-    .musicdiv a{
-        margin-left: -100px;
-        justify-content: space-evenly;
-    }
-    
-    .links ul{
-        margin-left: 1px;
-        font-size: 30px;
-    }
-    
-    .welcome{
-        font-size: 25px;
-    }
-    
-    .vc{
-    margin-left: 190px;
-}
-    .vc2{
-        margin-left: 525px;
-        margin-top: -30px;
-        width: 1080px;
-        height: 200px;
-    }
-    .vc3{
-        margin-left: 907px;
-        width: 10px;
-        height: 200px;
-        margin-top: -215px
-    }
-    .vc4{
-    margin-left: 180px;
-}
-.vc5{
-    margin-left: 515px;
-    width: 1080px;
-    height: 200px;
-    margin-top: -30px
-}
-.vc6{
-    margin-left: 890px;
-    width: 10px;
-    height: 200px;
-    margin-top: -213px
-}
-.vc7{
-    margin-left: 190px;
-}
-.vc8{
-    margin-left: 525px;
-    width: 1080px;
-    height: 200px;
-    margin-top: -30px
-}
-.vc9{
-    margin-left: 890px;
-    width: 10px;
-    height: 200px;
-    margin-top: -220px;
-    }
-    .musicdiv{
-    margin-top: -20px;
-}
-    .welcome{
-        margin-bottom: 70px;
-    }
-}
 .text1{
     text-align: center;
     color: white;
     font-family: "Josefin Sans", sans-serif;
     font-size: 40px;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
 }
 .text2{
     color: white;
     font-family: "Jesefin Sans", sans-serif;
     font-size: 20px;
-    margin-left: 145px;
-    margin-right: 215px;
     text-align: center;
+    margin-left: 3vw;
+    margin-right: 3vw;
+
 }
 .text3{
     color: white;
     text-align: center;
     font-size: 30px;
     font-family: "Jesefin Sans", sans-serif;
-    margin-top: 100px;
+    margin-top: 20vh;
 }
-.artimg{
-    height: 300px;
-    width: 300px;
+.artimg {
+    justify-content: space-evenly;
+    height: 30vw;
+    width: auto;
+    max-height: 50em;
+    margin-top: 3vh;
 }
 .artlist{
     list-style-type: none;
     display: flex;
     padding: 0;
-    align-items: center;
+    margin-top: -5vh;
     justify-content: center;
-    margin-top: -20px;
 }
 .artists{
     margin-top: 70px;
