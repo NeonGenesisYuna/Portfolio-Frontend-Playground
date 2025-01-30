@@ -6,13 +6,13 @@ body{
     background-attachment: fixed;
     margin: 0;
     height: 100vh;
-    overflow-y: scroll;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 .header{
     color: white;
     text-align: center;
     font-family: "Josefin Sans", sans-serif;
-    font-size: 30px;
     -webkit-text-stroke: 1px purple;
     gap: 0;
 }
@@ -20,13 +20,13 @@ body{
     color: white;
     font-family: "Josefin Sans", sans-serif;
     -webkit-text-stroke: 1px purple;
-    margin: 20px;                       
+    margin: 5vh;
 }
 
 .header h2 {
     color: white;
     font-family: "Josefin Sans", sans-serif;
-    margin: 30px;
+    margin: 5vh;
     
 }
 .student{
@@ -35,23 +35,30 @@ body{
 }
 .links ul{
     list-style-type: none;
-    font-size: 30px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     font-family: "Josefin Sans", sans-serif;
-    line-height: 80px
+    flex-wrap: nowrap;
+    height: 2vh;
+    margin-left: -5vw;
+    gap: -20vw;
 }
 
 .links a {
     text-decoration: none;
     color: white;
-    padding: 5px 10px;
-    transition: background-color 0.3s ease;
+    padding: 1vw 2vw;
+    transition: background-color 0.6s ease;
+    font-size: clamp(1.4em, 3vw, 3em);
+    box-sizing: border-box;
+    border: 2px solid transparent;
 }
 
 .links a:hover {
     background-color: white;
     color: black;
+    font-size: clamp(1.4em, 3vw, 3em);
+    padding: 1vw 2vw;
 }
 @media (max-width: 1280px){
     .header h1{
@@ -60,4 +67,7 @@ body{
     .header h2{
         font-size: 30px;
     }
+}
+html{
+    font-size:100%;
 }
