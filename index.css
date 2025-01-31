@@ -21,12 +21,14 @@ body{
     font-family: "Josefin Sans", sans-serif;
     -webkit-text-stroke: 1px purple;
     margin: 5vh;
+    font-size: clamp(3em, 5vw ,5em);
 }
 
 .header h2 {
     color: white;
     font-family: "Josefin Sans", sans-serif;
     margin: 5vh;
+    font-size: clamp(1.5em, 2vw, 2.5em);
     
 }
 .student{
@@ -59,14 +61,6 @@ body{
     color: black;
     font-size: clamp(1.4em, 3vw, 3em);
     padding: 1vw 2vw;
-}
-@media (max-width: 1280px){
-    .header h1{
-        font-size: 50px;
-    }
-    .header h2{
-        font-size: 30px;
-    }
 }
 html{
     font-size:100%;
