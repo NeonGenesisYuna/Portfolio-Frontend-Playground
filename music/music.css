@@ -7,13 +7,12 @@ body{
     margin: 0;
     height: 100vh;
     overflow-y: scroll;
-    overflow-x: clip;
+    overflow-x: hidden;
 }
 .header{
     color: white;
     text-align: center;
     font-family: "Josefin Sans", sans-serif;
-    font-size: 30px;
     -webkit-text-stroke: 1px purple;
     gap: 0;
 }
@@ -21,22 +20,22 @@ body{
     color: white;
     font-family: "Josefin Sans", sans-serif;
     -webkit-text-stroke: 1px purple;
-    margin: 5vh;
+    font-size: clamp(3em, 5vw ,5em);
 }
 
 .header h2 {
     color: white;
     font-family: "Josefin Sans", sans-serif;
-    margin: 5vh;
+    font-size: clamp(1.5em, 2vw, 2.5em);
 
 }
-.student{
-    margin: 0;
-    line-height: 50px;
+.header .student {
+    margin-bottom:6vh;
+    line-height: 5vh;
+    font-size: clamp(2em, 2vw, 5em);
 }
 .links ul{
     list-style-type: none;
-    font-size: 3vw;
     display: flex;
     justify-content: center;
     font-family: "Josefin Sans", sans-serif;
@@ -44,6 +43,7 @@ body{
     height: 2vh;
     margin-left: -5vw;
     gap: -20vw;
+    margin-bottom: 5vh;
 }
 
 .links a {
@@ -51,7 +51,7 @@ body{
     color: white;
     padding: 1vw 2vw;
     transition: background-color 0.6s ease;
-    font-size: 3vh;
+    font-size: clamp(1.4em, 3vw, 3em);
     box-sizing: border-box;
     border: 2px solid transparent;
 }
@@ -59,92 +59,72 @@ body{
 .links a:hover {
     background-color: white;
     color: black;
-    font-size: 3vh;
+    font-size: clamp(1.4em, 3vw, 3em);
     padding: 1vw 2vw;
 }
-@media (max-width: 1280px){
-    .header h1{
-        font-size: 50px;
-    }
-    .header h2{
-        font-size: 30px;
-    }
+html{
+    font-size:100%;
 }
 .music{
     color: white;
     font-family: "Josefin Sans", sans-serif;
+    margin-top: 10vh;
 }
 .welcome{
     text-align: center;
+    font-size: clamp(2em, 3vw ,3em);
 }
 .imagelink{
     justify-content: space-evenly;
-    height: 30vw;
+    height: clamp(5vw, 25vw, 50vh);
     width: auto;
+    max-height: 20em;
+    margin-top: -10vh;
+    align-content: center;
 }
-.musicdiv{
-    margin-top: 100px;
+.musicdiv {
+    display: flex;
     justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 15vh;
 }
 
-.track1{
-    height: 100px;
-    width: 600px;
+.track {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 20vw;
+    margin: 0;
+    justify-content: flex-start;
 }
+
+.imagelink {
+    height: clamp(10vw, 25vw, 50vh);
+    width: auto;
+    object-fit: cover;
+    max-height: 20em;
+}
+
+.track-title {
+    font-size: clamp(1em, 2vw, 2em);
+    color: white;
+    font-family: "Josefin Sans", sans-serif;
+    text-align: center;
+}
+
+
 a{
     text-decoration: none;
-}
-.vc{
-    margin-left: 310px;
-}
-.vc2{
-    margin-left: 850px;
-    width: 1080px;
-    height: 200px;
-    margin-top: -45px
-}
-.vc3{
-    margin-left: 1440px;
-    width: 10px;
-    height: 200px;
-    margin-top: -220px
-}
-.vc4{
-    margin-left: 290px;
-}
-.vc5{
-    margin-left: 825px;
-    width: 1080px;
-    height: 200px;
-    margin-top: -45px
-}
-.vc6{
-    margin-left: 1425px;
-    width: 10px;
-    height: 200px;
-    margin-top: -220px
-}
-.vc7{
-    margin-left: 320px;
-}
-.vc8{
-    margin-left: 835px;
-    width: 1080px;
-    height: 200px;
-    margin-top: -45px
-}
-.vc9{
-    margin-left: 1425px;
-    width: 10px;
-    height: 200px;
-    margin-top: -220px
 }
 
 .text1{
     text-align: center;
     color: white;
     font-family: "Josefin Sans", sans-serif;
-    font-size: 40px;
+    font-size: 3vh;
     margin-left: 0.5vw;
     margin-right: 0.5vw;
 }
@@ -153,22 +133,22 @@ a{
     font-family: "Jesefin Sans", sans-serif;
     font-size: 20px;
     text-align: center;
-    margin-left: 3vw;
-    margin-right: 3vw;
+    margin-left: 4vw;
+    margin-right: 4vw;
 
 }
 .text3{
     color: white;
     text-align: center;
-    font-size: 30px;
+    font-size: 3vh;
     font-family: "Jesefin Sans", sans-serif;
-    margin-top: 20vh;
+    margin-top: 10vh;
 }
 .artimg {
     justify-content: space-evenly;
     height: 30vw;
     width: auto;
-    max-height: 50em;
+    max-height: 20em;
     margin-top: 3vh;
 }
 .artlist{
