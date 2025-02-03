@@ -107,6 +107,7 @@ ul {
 
 .layer {
     text-align: center;
+    margin-top: 2vh;
 }
 
 .layer a {
@@ -123,7 +124,7 @@ ul {
 }
 
 .layer a:hover {
-    background-color: crimson;
+    color: deeppink;
     padding: 0.5vw 1vw;
 }
 .container {
