@@ -1,0 +1,187 @@
+body{
+    background-image: url(../imgs/wiredbg2.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    height: 100vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+.header{
+    color: white;
+    text-align: center;
+    font-family: "Qetod", sans-serif;
+    gap: 0;
+}
+.header h1 {
+    color: white;
+    font-family: "Qetod", sans-serif;
+    -webkit-text-stroke: 0.01vh black;
+    margin: 5vh;
+    font-size: clamp(3em, 15vw ,8em);
+}
+
+.header h2 {
+    color: red;
+    font-family: "Qetod", sans-serif;
+    font-size: clamp(1.5em, 10vw, 4em);
+    margin-top: 25vh;
+}
+
+.links ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    font-family: "Qetod", sans-serif;
+    flex-wrap: nowrap;
+}
+
+.links a {
+    text-decoration: none;
+    color: white;
+    padding: 1vw 2vw;
+    transition: background-color 0.6s ease;
+    font-size: clamp(1.4em, 3vw, 3em);
+    box-sizing: border-box;
+    border: 2px solid transparent;
+}
+
+.links a:hover {
+    background-color: white;
+    color: black;
+    font-size: clamp(1.4em, 3vw, 3em);
+    padding: 1vw 2vw;
+}
+html{
+    font-size:100%;
+}
+.glitch {
+    position: relative;
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: "Qedot", sans-serif;
+    color: white;
+    animation: flicker 0.7s infinite alternate;
+    align-content: center;
+    justify-content: center;
+    display: flex;;
+}
+
+.glitch::before,
+.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0.8;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+}
+
+.glitch::before {
+    color: red;
+    transform: translate(-2px, -2px);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 50%);
+    animation: glitch-anim 0.7s infinite linear alternate-reverse;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+}
+
+.glitch::after {
+    color: crimson;
+    transform: translate(2px, 2px);
+    clip-path: polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%);
+    animation: glitch-anim 0.7s infinite linear alternate;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+}
+
+@keyframes flicker {
+    0% { opacity: 1; }
+    50% { opacity: 0.8; }
+    100% { opacity: 1; }
+
+}
+
+@keyframes glitch-anim {
+    0% { transform: translate(2px, 2px); }
+    100% { transform: translate(-2px, -2px); }
+}
+
+.glitch-container {
+    align-items: center;
+    height: 10vh;
+    text-align: center;
+}
+
+
+.glitch-alt {
+    position: relative;
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: "Qedot", sans-serif;
+    color: white;
+    animation: flicker 0.2s infinite alternate;
+    bottom: 22vh;
+}
+
+.glitch-alt::before,
+.glitch-alt::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0.9;
+    margin-bottom: 200px;
+}
+
+.glitch::before,
+.glitch::after,
+.glitch-alt::before,
+.glitch-alt::after {
+    width: 100%;
+    text-align: center;
+}
+
+.glitch-alt::before {color: limegreen;
+    transform: translate(-3px, 3px);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 50%);
+    animation: glitch-alt-anim 0.001s infinite linear alternate;
+}
+
+
+.glitch-alt::after {
+    color: magenta;
+    transform: translate(3px, -3px);
+    clip-path: polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%);
+    animation: glitch-alt-anim 0.001s infinite linear alternate;
+}
+
+
+@keyframes flicker {
+    0% { opacity: 1; }
+    50% { opacity: 0.8; }
+    100% { opacity: 1; }
+}
+
+@keyframes glitch-anim {
+    0% { transform: translate(2px, 2px); }
+    100% { transform: translate(-2px, -2px); }
+}
+
+@keyframes flicker-alt {
+    0% { opacity: 1; }
+    40% { opacity: 0.6; }
+    80% { opacity: 0.9; }
+    100% { opacity: 1; }
+}
+
+@keyframes glitch-alt-anim {
+    0% { transform: translate(3px, -3px); }
+    100% { transform: translate(-3px, 3px); }
+}
