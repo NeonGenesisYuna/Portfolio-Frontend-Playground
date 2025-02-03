@@ -1,0 +1,141 @@
+body{
+    background-image: url("../imgs/selectionbg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    height: 100vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+@font-face {
+    font-family: "Qetod";
+    src: url("../fonts/Qetod.ttf") format("woff2"),
+    url("../fonts/Qetod.ttf") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "DeathNote";
+    src: url("../fonts/DeathNote.ttf") format("truetype");
+    url("../fonts/Deathnote.tff") format ("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+h1{
+    text-align: center;
+    font-family: "Qetod", sans-serif;
+    color: white;
+    font-size: clamp(1rem, 5vw, 5rem);
+}
+.glitch {
+    position: relative;
+    font-weight: bold;
+    font-family: "Qetod", sans-serif;
+    color: white;
+    animation: flicker 0.7s infinite alternate;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    font-size: clamp(1em, 12vw, 7em);
+    bottom: 5vh;
+}
+
+.glitch::before,
+.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0.8;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+}
+
+.glitch::before {
+    color: crimson;
+    transform: translate(-2px, -2px);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 50%);
+    animation: glitch-anim 1s infinite linear alternate-reverse;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+}
+
+.glitch::after {
+    color: deeppink;
+    transform: translate(2px, 2px);
+    clip-path: polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%);
+    animation: glitch-anim 1s infinite linear alternate;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+}
+
+@keyframes flicker {
+    0% { opacity: 1; }
+    50% { opacity: 0.8; }
+    100% { opacity: 1; }
+
+}
+
+@keyframes glitch-anim {
+    0% { transform: translate(2px, 2px); }
+    100% { transform: translate(-2px, -2px); }
+}
+
+.glitch::before,
+.glitch::after
+{
+    width: 100%;
+    text-align: center;
+}
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 80vw;
+    list-style: none;
+
+}
+
+.layer {
+    text-align: center;
+}
+
+.layer a {
+    display: inline-block;
+    padding: 0.5vw 1vw;
+    font-size: clamp(3em, 1vw, 5em);
+    text-decoration: none;
+    color: white;
+    font-family: "DeathNote", sans-serif;
+    border: 2px solid transparent;
+    transition: background-color 0.4s ease, padding 0.4s ease;
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+.layer a:hover {
+    background-color: crimson;
+    padding: 0.5vw 1vw;
+}
+.container {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;
+    margin-top: 10vh;
+}
+
+.container img {
+    max-width: 50%; /* Ensures image scales down if needed */
+    max-height: 50vh; /* Prevents it from overflowing vertically */
+    width: auto; /* Maintains aspect ratio */
+    height: auto;
+}
