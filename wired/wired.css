@@ -9,6 +9,14 @@ body{
     overflow-y: hidden;
     overflow-x: hidden;
 }
+@font-face {
+    font-family: "Qetod";
+    src: url("../fonts/Qetod.ttf") format("woff2"),
+    url("../fonts/Qetod.ttf") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
 .header{
     color: white;
     text-align: center;

@@ -124,14 +124,15 @@ a{
     text-align: center;
     color: white;
     font-family: "Josefin Sans", sans-serif;
-    font-size: 3vh;
+    font-size: 5vh;
     margin-left: 0.5vw;
     margin-right: 0.5vw;
+    margin-top: 20vh;
 }
 .text2{
     color: white;
     font-family: "Josefin Sans", sans-serif;
-    font-size: 20px;
+    font-size: clamp(1em, 2vw, 3em);
     text-align: center;
     margin-left: 4vw;
     margin-right: 4vw;
