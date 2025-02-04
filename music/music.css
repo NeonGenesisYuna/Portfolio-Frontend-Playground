@@ -76,9 +76,10 @@ html{
 }
 .imagelink{
     justify-content: space-evenly;
-    height: clamp(5vw, 25vw, 50vh);
+    height: clamp(5vw, 30vh, 70vh);
     width: auto;
     max-height: 20em;
+    max-width: 20em;
     margin-top: -10vh;
     align-content: center;
 }
