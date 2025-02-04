@@ -1,3 +1,6 @@
+html{
+    font-size:16px;
+}
 body{
     background-image: url(/imgs/musicbg.jpg);
     background-size: cover;
@@ -62,9 +65,7 @@ body{
     font-size: clamp(1.4em, 3vw, 4em);
     padding: 1vw 2vw;
 }
-html{
-    font-size:100%;
-}
+
 .music{
     color: white;
     font-family: "Josefin Sans", sans-serif;
