@@ -113,7 +113,7 @@ ul {
 .layer a {
     display: inline-block;
     padding: 0.5vw 1vw;
-    font-size: clamp(3em, 1vw, 5em);
+    font-size: clamp(1em, 2em, 7em);
     text-decoration: none;
     color: white;
     font-family: "DeathNote", sans-serif;
