@@ -29,3 +29,18 @@ h1{
     color: white;
     font-size: clamp(1rem, 5vw, 5rem);
 }
+.close-button {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 5px;
+    transition: color 0.3s ease;
+}
+
+.close-button:hover {
+    color: red;
+}

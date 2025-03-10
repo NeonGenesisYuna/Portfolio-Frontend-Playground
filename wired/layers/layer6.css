@@ -1,5 +1,5 @@
 body{
-    background-image: url("../../imgs/Layer_1.jpg");
+    background-image: url("../../imgs/Layer_6.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -28,4 +28,19 @@ h1{
     font-family: "Qetod", sans-serif;
     color: white;
     font-size: clamp(1rem, 5vw, 5rem);
+}
+.close-button {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 5px;
+    transition: color 0.3s ease;
+}
+
+.close-button:hover {
+    color: red;
 }
