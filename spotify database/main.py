@@ -1,4 +1,5 @@
-from flask import Flask, render_template_string
+import os
+from flask import Flask
 from flask_cors import CORS
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
@@ -6,13 +7,16 @@ from spotipy.oauth2 import SpotifyOAuth
 app = Flask(__name__)
 CORS(app)
 
-# Spotify authentication
+# Get credentials from environment variables
 sp = spotipy.Spotify(auth_manager=SpotifyOAuth(
-    client_id="f4f4e7428a764f0a9152b6b27a3fc2d8",
-    client_secret="2f735e17f7c9485aa42994895e2de991",
-    redirect_uri="http://localhost:8888/callback",
+    client_id=os.getenv("SPOTIPY_CLIENT_ID"),
+    client_secret=os.getenv("SPOTIPY_CLIENT_SECRET"),
+    redirect_uri=os.getenv("SPOTIPY_REDIRECT_URI"),
     scope="user-library-read user-top-read"
 ))
+
+# Routes remain unchanged
+
 
 @app.route('/top-songs')
 def get_top_songs():
@@ -87,4 +91,4 @@ def get_top_artists():
     return render_template_string(html_content)
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+    app.run(host="0.0.0.0", port=5000)

@@ -1,4 +1,4 @@
-fetch('http://127.0.0.1:5000/albums')
+fetch('https://my-flask-api-ywsd.onrender.com/top-songs')
     .then(response => response.text())  // Parse HTML response
     .then(data => {
         let list = document.getElementById('album-list');
