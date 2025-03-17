@@ -23,11 +23,20 @@ url("../fonts/Deathnote.tff") format ("woff");
     font-weight: normal;
     font-style: normal;
 }
-h1{
+@font-face {
+    font-family: "NIGHTMARE PILLS";
+    src: url("../../fonts/NightmarePills-BV2w.ttf") format("truetype");
+url("../fonts/NightmarePills-BV2w.tff") format ("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+pre{
     text-align: center;
-    font-family: "Qetod", sans-serif;
-    color: white;
-    font-size: clamp(1rem, 5vw, 5rem);
+    font-family: "NIGHTMARE PILLS", sans-serif;
+    color: deepskyblue;
+    font-size: clamp(1rem, 4vw, 5em);
+    margin-left: 20px;
+    margin-right: 20px;
 }
 .close-button {
     position: fixed;
@@ -43,4 +52,75 @@ h1{
 
 .close-button:hover {
     color: red;
+}
+
+.deleted{
+    text-align: center;
+    font-family: "Qetod", sans-serif;
+    color: white;
+    font-size: clamp(5em, 5em, 7em);
+}
+
+.glitch {
+    position: relative;
+    font-weight: bold;
+    font-family: "NIGHTMARE PILLS", sans-serif;
+    color: white;
+    animation: flicker 0.7s infinite alternate;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    font-size: clamp(1vw, 5vw, 7em);
+    bottom: 5vh;
+}
+
+.glitch::before,
+.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0.8;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+}
+
+.glitch::before {
+    color: white;
+    transform: translate(-3px, -3px);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 50%);
+    animation: glitch-anim 0.001s infinite linear alternate-reverse;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+}
+
+.glitch::after {
+    color: red;
+    transform: translate(3px, 3px);
+    clip-path: polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%);
+    animation: glitch-anim 0.001s infinite linear alternate;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+}
+
+@keyframes flicker {
+    0% { opacity: 1; }
+    50% { opacity: 0.8; }
+    100% { opacity: 1; }
+
+}
+
+@keyframes glitch-anim {
+    0% { transform: translate(3px, 3px); }
+    100% { transform: translate(-2px, -2px); }
+}
+
+.glitch::before,
+.glitch::after
+{
+    width: 100%;
+    text-align: center;
 }

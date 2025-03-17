@@ -24,7 +24,6 @@ body {
     font-family: "Arial", sans-serif;
 }
 
-/* Playlist container */
 .playlist {
     max-width: 600px;
     margin: 20px auto;
@@ -32,14 +31,13 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
-    height: 20vh;  /* Fixed height for the playlist */
-    overflow-y: scroll;  /* Enable scrolling */
+    height: 20vh;
+    overflow-y: scroll;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
 }
 
-/* Song styling inside the playlist */
 .song {
     display: flex;
     align-items: center;
@@ -51,37 +49,32 @@ body {
     color: deeppink;
 }
 
-/* Style for the play buttons */
 .song button {
-    background-color: deeppink; /* Pink background */
-    color: white; /* White text */
-    border: none; /* Remove default border */
-    padding: 10px 20px; /* Add some padding */
-    font-size: 1em; /* Set font size */
-    font-family: "Arial", sans-serif; /* Ensure consistent font */
-    border-radius: 15px; /* Rounded corners */
-    cursor: pointer; /* Make it clear it's clickable */
-    transition: background 0.3s ease, transform 0.1s ease; /* Smooth hover effect */
+    background-color: deeppink;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-family: "Arial", sans-serif;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.1s ease;
 }
 
-/* Hover effect */
 .song button:hover {
-    background-color: hotpink; /* Lighter pink on hover */
-    transform: scale(1.05); /* Slightly grow when hovered */
+    background-color: hotpink;
+    transform: scale(1.05);
 }
 
-/* Active effect (when clicking) */
 .song button:active {
-    background-color: #ff66b2; /* Even lighter pink when clicked */
-    transform: scale(0.95); /* Shrink slightly when clicked */
+    background-color: #ff66b2;
+    transform: scale(0.95);
 }
 
-/* Make sure no extra margin for the last song */
 .song:last-child {
     border-bottom: none;
 }
 
-/* Now Playing section - not fixed anymore, takes normal space in the flow */
 .now-playing {
     margin-top: 20px;
     display: none;  /* Initially hidden */
@@ -90,13 +83,11 @@ body {
     justify-content: center;
 }
 
-/* Vinyl gif */
 #vinylGif {
     width: 20vw;
     height: auto;
 }
 
-/* Song info */
 .info {
     flex: 1;
     text-align: left;
@@ -109,7 +100,6 @@ body {
     margin: 0 0 10px;
 }
 
-/* Custom progress bar */
 .progress-container {
     background-color: #333;
     border-radius: 10px;
@@ -124,13 +114,10 @@ body {
     width: 0%;
 }
 
-/* Volume slider */
 .volume {
     width: 100px;
 }
 
-
-/* Song info */
 .info {
     flex: 1;
     text-align: left;
@@ -143,7 +130,6 @@ body {
     margin: 0 0 10px;
 }
 
-/* Custom progress bar */
 .progress-container {
     background-color: #333;
     border-radius: 10px;
@@ -158,12 +144,10 @@ body {
     width: 0%;
 }
 
-/* Volume slider */
 .volume {
     width: 100px;
 }
 
-/* Song info */
 .info {
     flex: 1;
     text-align: left;
@@ -176,7 +160,6 @@ body {
     margin: 0 0 10px;
 }
 
-/* Custom Progress Bar */
 .progress-container {
     background-color: #333;
     border-radius: 10px;
@@ -190,7 +173,6 @@ body {
     width: 0%;
 }
 
-/* Volume slider */
 .volume {
     width: 100px;
 }
@@ -199,11 +181,11 @@ body {
     -webkit-appearance: none;
     appearance: none;
     transform: rotate(-90deg);
-    width: 100px;  /* This determines the length of the slider (after rotation, it’s the vertical length) */
-    height: 5px;   /* This is the thickness of the track */
+    width: 100px;
+    height: 5px;
     border-radius: 5px;
     outline: none;
-    /* Use a linear gradient with a CSS variable for the fill */
+
     background: linear-gradient(
             to right,
             deeppink var(--value, 50%),
@@ -211,18 +193,18 @@ body {
     );
 }
 
-/* WebKit thumb styling */
+
 .volume input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
     width: 15px;
     height: 15px;
-    background: deeppink;  /* Same color as the fill */
+    background: deeppink;
     border-radius: 50%;
     cursor: pointer;
 }
 
-/* Firefox thumb styling */
+
 .volume input[type="range"]::-moz-range-thumb {
     width: 15px;
     height: 15px;
@@ -231,13 +213,13 @@ body {
     cursor: pointer;
 }
 
-/* Make the volume slider bigger */
+
 .volume input[type="range"] {
-    width: 150px;  /* Increase width */
-    height: 8px;   /* Make the track thicker */
+    width: 150px;
+    height: 8px;
 }
 
-/* Make the thumb (the draggable circle) bigger */
+
 .volume input[type="range"]::-webkit-slider-thumb {
     width: 20px;
     height: 20px;

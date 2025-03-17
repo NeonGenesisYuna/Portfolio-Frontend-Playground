@@ -6,8 +6,6 @@ body{
     background-attachment: fixed;
     margin: 0;
     height: 100vh;
-    overflow-y: hidden;
-    overflow-x: hidden;
 }
 @font-face {
     font-family: "Qetod";
@@ -23,11 +21,20 @@ url("../fonts/Deathnote.tff") format ("woff");
     font-weight: normal;
     font-style: normal;
 }
-h1{
+@font-face {
+    font-family: "NIGHTMARE PILLS";
+    src: url("../../fonts/NightmarePills-BV2w.ttf") format("truetype");
+url("../fonts/NightmarePills-BV2w.tff") format ("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+pre{
     text-align: center;
     font-family: "DeathNote", sans-serif;
-    color: white;
-    font-size: clamp(1rem, 5vw, 5rem);
+    color: deepskyblue;
+    font-size: clamp(1rem, 4vw, 5em);
+    margin-left: 20px;
+    margin-right: 20px;
 }
 .close-button {
     position: fixed;
@@ -43,4 +50,11 @@ h1{
 
 .close-button:hover {
     color: red;
+}
+
+.psyche{
+    text-align: center;
+    font-family: "Qetod", sans-serif;
+    color: deeppink;
+    font-size: clamp(5em, 5em, 7em);
 }
