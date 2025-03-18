@@ -73,7 +73,7 @@ body{
 }
 .welcome{
     text-align: center;
-    font-size: clamp(2em, 3vw ,4em);
+    font-size: clamp(2em, 2vw ,4em);
 }
 
 .musicdiv {
