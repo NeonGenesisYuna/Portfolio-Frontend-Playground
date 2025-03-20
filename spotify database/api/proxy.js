@@ -2,20 +2,21 @@ import axios from "axios";
 
 export default async function handler(req, res) {
     try {
-        const { endpoint } = req.query;
-        const apiUrl = `https://your-api.vercel.app/${endpoint}`; // Update with correct API URL
+        const { endpoint } = req.query; // Get the requested endpoint
+        // Use your actual URL for the Flask API on Vercel
+        const apiUrl = `https://portfolio-frontend-playground.vercel.app/spotify%20database/${endpoint}`; // Updated API URL
 
-        console.log(`Fetching API: ${apiUrl}`);  // Log the API URL
+        console.log(`Fetching API: ${apiUrl}`);  // Log the API URL being called
 
         const response = await axios.get(apiUrl, {
             headers: { "Accept": "application/json" } // Expect JSON response
         });
 
-        console.log("API Response:", response.data); // Log raw response
+        console.log("API Response:", response.data); // Log the actual response
 
-        // Check if the response is valid JSON
+        // Check if response is valid JSON
         if (typeof response.data === "object") {
-            res.json(response.data);
+            res.json(response.data); // Send the JSON data
         } else {
             res.status(500).json({ error: "Invalid JSON response from API" });
         }
