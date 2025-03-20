@@ -1,5 +1,5 @@
 function fetchData(endpoint, elementId) {
-    fetch(`/api/proxy?endpoint=${endpoint}`)
+    fetch(`https://portfolio-frontend-playground.vercel.app/spotify%20database/${endpoint}`)
         .then(response => {
             console.log('Response:', response);  // Log the full response
             return response.text();  // Read as text first to inspect the raw response
@@ -55,3 +55,4 @@ function fetchData(endpoint, elementId) {
 // Fetch top songs and top artists
 fetchData("top-songs", "top-songs-list");
 fetchData("top-artists", "top-artists-list");
+     

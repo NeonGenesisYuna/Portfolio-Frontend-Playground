@@ -2,14 +2,15 @@ from flask import Flask, jsonify
 from flask_cors import CORS
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
+import os
 
 app = Flask(__name__)
 CORS(app)
 
 sp = spotipy.Spotify(auth_manager=SpotifyOAuth(
-    client_id="YOUR_CLIENT_ID",
-    client_secret="YOUR_CLIENT_SECRET",
-    redirect_uri="YOUR_REDIRECT_URI",
+    client_id=os.getenv("SPOTIPY_CLIENT_ID"),
+    client_secret=os.getenv("SPOTIPY_CLIENT_SECRET"),
+    redirect_uri=os.getenv("SPOTIPY_REDIRECT_URI"),
     scope="user-library-read user-top-read"
 ))
 
@@ -24,7 +25,7 @@ def get_top_songs():
         }
         for track in results['items']
     ]
-    return jsonify(songs)  # ✅ Returns JSON, not HTML
+    return jsonify(songs)
 
 @app.route('/spotify%20database/top-artists')
 def get_top_artists():
@@ -36,7 +37,8 @@ def get_top_artists():
         }
         for artist in results['items']
     ]
-    return jsonify(artists)  # ✅ Returns JSON, not HTML
+    return jsonify(artists)
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
+     

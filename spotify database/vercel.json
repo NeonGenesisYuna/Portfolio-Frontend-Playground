@@ -4,12 +4,21 @@
     {
       "src": "api/*.py",
       "use": "@vercel/python"
+    },
+    {
+      "src": "index.html",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
     {
-      "src": "/spotify-database/(.*)",
+      "src": "/spotify%20database/index.html",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/spotify%20database/(.*)",
       "dest": "/api/$1"
     }
   ]
 }
+     

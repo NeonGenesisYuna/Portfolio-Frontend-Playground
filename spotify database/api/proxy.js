@@ -3,7 +3,7 @@ import axios from "axios";
 export default async function handler(req, res) {
     try {
         const { endpoint } = req.query; // Get the requested endpoint
-        const apiUrl = `https://portfolio-frontend-playground.vercel.app/spotify%20database/${endpoint}`; // Ensure correct URL
+        const apiUrl = `https://portfolio-frontend-playground.vercel.app/spotify%20database/${endpoint}`; // Use the full URL
 
         console.log(`Fetching API: ${apiUrl}`);  // Log the URL for debugging
 
@@ -24,3 +24,4 @@ export default async function handler(req, res) {
         res.status(500).json({ error: "Failed to fetch data", details: error.message });
     }
 }
+     
