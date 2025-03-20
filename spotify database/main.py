@@ -86,5 +86,7 @@ def get_top_artists():
     """
     return render_template_string(html_content)
 
-if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+# Vercel doesn't use app.run(), so we expose 'app' for deployment
+def handler(event, context):
+    return app(event, context)
+
