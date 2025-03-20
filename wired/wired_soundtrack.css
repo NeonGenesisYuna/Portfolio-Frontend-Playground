@@ -9,11 +9,19 @@ body {
     overflow: hidden;
 }
 
+@font-face {
+    font-family: "Redaction 50";
+    src: url("../fonts/Redaction_50-Regular.woff2") format("woff2"),
+    url("../fonts/Redaction_50-Regular.woff2") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
 .header {
     text-align: center;
     color: white;
     font-size: clamp(3rem, 2vw, 6vw);
-    font-family: "Arial", sans-serif;
+    font-family: "Redaction 50", sans-serif;
     margin-bottom: -20px;
 }
 
@@ -21,7 +29,7 @@ body {
     text-align: center;
     color: white;
     font-size: clamp(2rem, 2vw, 6vw);
-    font-family: "Arial", sans-serif;
+    font-family: "Redaction 50", sans-serif;
 }
 
 .playlist {
@@ -45,7 +53,7 @@ body {
     padding: 10px;
     border-bottom: 1px solid #333;
     font-size: 1.5em;
-    font-family: "Arial", sans-serif;
+    font-family: "Redaction 50", sans-serif;
     color: deeppink;
 }
 
@@ -55,7 +63,7 @@ body {
     border: none;
     padding: 10px 20px;
     font-size: 1em;
-    font-family: "Arial", sans-serif;
+    font-family: "Redaction 50", sans-serif;
     border-radius: 15px;
     cursor: pointer;
     transition: background 0.3s ease, transform 0.1s ease;
@@ -81,6 +89,7 @@ body {
     gap: 20px;
     align-items: center;
     justify-content: center;
+    font-family: "Redaction 50", sans-serif;
 }
 
 #vinylGif {
