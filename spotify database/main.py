@@ -8,9 +8,9 @@ app = Flask(__name__)
 CORS(app)
 
 sp = spotipy.Spotify(auth_manager=SpotifyOAuth(
-    client_id=os.getenv("SPOTIPY_CLIENT_ID"),
-    client_secret=os.getenv("SPOTIPY_CLIENT_SECRET"),
-    redirect_uri=os.getenv("SPOTIPY_REDIRECT_URI"),
+    client_id=os.getenv("f4f4e7428a764f0a9152b6b27a3fc2d8"),
+    client_secret=os.getenv("2f735e17f7c9485aa42994895e2de991"),
+    redirect_uri=os.getenv("https://portfolio-frontend-playground.vercel.app/spotify%20database/index.html"),
     scope="user-library-read user-top-read"
 ))
 
