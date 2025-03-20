@@ -13,7 +13,7 @@ sp = spotipy.Spotify(auth_manager=SpotifyOAuth(
     scope="user-library-read user-top-read"
 ))
 
-@app.route('/top-songs')
+@app.route('/spotify%20database/top-songs')
 def get_top_songs():
     results = sp.current_user_top_tracks(time_range='short_term', limit=10)
     songs = [
@@ -26,7 +26,7 @@ def get_top_songs():
     ]
     return jsonify(songs)  # ✅ Returns JSON, not HTML
 
-@app.route('/top-artists')
+@app.route('/spotify%20database/top-artists')
 def get_top_artists():
     results = sp.current_user_top_artists(time_range='short_term', limit=10)
     artists = [

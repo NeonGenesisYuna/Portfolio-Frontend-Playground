@@ -3,9 +3,9 @@ import axios from "axios";
 export default async function handler(req, res) {
     try {
         const { endpoint } = req.query; // Get the requested endpoint
-        const apiUrl = `https://portfolio-frontend-playground.vercel.app/spotify%20database/${endpoint}`; // Updated API URL
+        const apiUrl = `https://portfolio-frontend-playground.vercel.app/spotify%20database/${endpoint}`; // Ensure correct URL
 
-        console.log(`Fetching API: ${apiUrl}`);  // Log the API URL being called
+        console.log(`Fetching API: ${apiUrl}`);  // Log the URL for debugging
 
         const response = await axios.get(apiUrl, {
             headers: { "Accept": "application/json" } // Expect JSON response
