@@ -1,18 +1,21 @@
-// Function to fetch and display data
 function fetchData(endpoint, elementId) {
-    fetch(`/api/proxy?endpoint=${endpoint}`) // Calls the proxy API
+    fetch(`/api/proxy?endpoint=${endpoint}`)
         .then(response => response.json()) // Expect JSON response
         .then(data => {
+            if (!Array.isArray(data)) {
+                throw new Error("Invalid JSON format");
+            }
+
             let list = document.getElementById(elementId);
             list.innerHTML = ""; // Clear previous content
 
             data.forEach(item => {
                 let li = document.createElement("li");
-                li.classList.add("song"); // Apply CSS class
+                li.classList.add("song");
 
                 let img = document.createElement("img");
                 img.src = item.image;
-                img.classList.add("album-cover"); // Add image styling
+                img.classList.add("album-cover");
 
                 let songInfo = document.createElement("div");
                 songInfo.classList.add("song-info");
@@ -23,7 +26,7 @@ function fetchData(endpoint, elementId) {
 
                 let artistName = document.createElement("span");
                 artistName.classList.add("artist-name");
-                artistName.textContent = `by ${item.artist}`;
+                artistName.textContent = `by ${item.artist || "Unknown"}`;
 
                 songInfo.appendChild(songTitle);
                 songInfo.appendChild(artistName);
@@ -33,9 +36,12 @@ function fetchData(endpoint, elementId) {
                 list.appendChild(li);
             });
         })
-        .catch(error => console.error("Error:", error));
+        .catch(error => {
+            console.error("Error loading data:", error);
+            document.getElementById(elementId).innerHTML = "<p>Failed to load data.</p>";
+        });
 }
 
-// Fetch data for top songs and top artists
+// Fetch top songs and top artists
 fetchData("top-songs", "top-songs-list");
 fetchData("top-artists", "top-artists-list");
