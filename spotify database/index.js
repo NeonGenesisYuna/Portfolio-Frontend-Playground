@@ -1,4 +1,4 @@
-fetch('http://127.0.0.1:5000/albums')
+fetch('fetch("https://portfolio-frontend-playground.vercel.app/api/proxy")  ')
     .then(response => response.text())  // Parse HTML response
     .then(data => {
         let list = document.getElementById('album-list');
