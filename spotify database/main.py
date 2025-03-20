@@ -10,7 +10,7 @@ CORS(app)
 sp = spotipy.Spotify(auth_manager=SpotifyOAuth(
     client_id="f4f4e7428a764f0a9152b6b27a3fc2d8",
     client_secret="2f735e17f7c9485aa42994895e2de991",
-    redirect_uri="http://localhost:8888/callback",
+    redirect_uri="https://portfolio-frontend-playground.vercel.app/spotify%20database/index.html",
     scope="user-library-read user-top-read"
 ))
 
