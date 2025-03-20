@@ -1,19 +1,22 @@
 function fetchData(endpoint, elementId) {
     fetch(`https://portfolio-frontend-playground.vercel.app/spotifydatabase/${endpoint}`)
         .then(response => {
-            console.log('Response:', response);  // Log the full response
-            return response.text();  // Read as text first to inspect the raw response
+            console.log('Response:', response);
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.text();
         })
         .then(text => {
-            console.log('Response Text:', text);  // Log the raw text response
+            console.log('Response Text:', text);
             try {
-                const data = JSON.parse(text);  // Try parsing it to JSON
+                const data = JSON.parse(text);
                 if (!Array.isArray(data)) {
                     throw new Error("Invalid JSON format");
                 }
 
                 let list = document.getElementById(elementId);
-                list.innerHTML = ""; // Clear previous content
+                list.innerHTML = "";
 
                 data.forEach(item => {
                     let li = document.createElement("li");
