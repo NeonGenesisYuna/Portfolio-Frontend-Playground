@@ -1,6 +1,11 @@
 function fetchData(endpoint, elementId) {
     fetch(`/api/proxy?endpoint=${endpoint}`)
-        .then(response => response.json()) // Expect JSON response
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.json(); // Expect JSON response
+        })
         .then(data => {
             if (!Array.isArray(data)) {
                 throw new Error("Invalid JSON format");
@@ -38,7 +43,7 @@ function fetchData(endpoint, elementId) {
         })
         .catch(error => {
             console.error("Error loading data:", error);
-            document.getElementById(elementId).innerHTML = "<p>Failed to load data.</p>";
+            document.getElementById(elementId).innerHTML = `<p>Failed to load data: ${error.message}</p>`;
         });
 }
 

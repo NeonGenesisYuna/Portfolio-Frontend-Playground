@@ -3,7 +3,6 @@ import axios from "axios";
 export default async function handler(req, res) {
     try {
         const { endpoint } = req.query; // Get the requested endpoint
-        // Use your actual URL for the Flask API on Vercel
         const apiUrl = `https://portfolio-frontend-playground.vercel.app/spotify%20database/${endpoint}`; // Updated API URL
 
         console.log(`Fetching API: ${apiUrl}`);  // Log the API URL being called
