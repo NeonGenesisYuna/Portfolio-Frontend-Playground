@@ -21,22 +21,6 @@
     <!-- Top Artists will be dynamically populated here -->
 </ul>
 
-<script>
-    // Fetch top songs and top artists from Flask server
-    function fetchData(endpoint, elementId) {
-        fetch(endpoint)
-            .then(response => response.text())  // Expecting HTML response
-            .then(data => {
-                let list = document.getElementById(elementId);
-                list.innerHTML = data;  // Insert the raw HTML into the page
-            })
-            .catch(error => console.error('Error:', error));
-    }
-
-    // Fetch data for the different sections
-    fetchData('http://127.0.0.1:5000/top-songs', 'top-songs-list');
-    fetchData('http://127.0.0.1:5000/top-artists', 'top-artists-list');
-</script>
-
+<script src="index.js"></script> <!-- Import index.js -->
 </body>
 </html>
