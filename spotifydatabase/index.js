@@ -1,5 +1,5 @@
 function fetchData(endpoint, elementId) {
-    fetch(`https://portfolio-frontend-playground.vercel.app/spotify%20database/${endpoint}`)
+    fetch(`https://portfolio-frontend-playground.vercel.app/spotifydatabase/${endpoint}`)
         .then(response => {
             console.log('Response:', response);  // Log the full response
             return response.text();  // Read as text first to inspect the raw response

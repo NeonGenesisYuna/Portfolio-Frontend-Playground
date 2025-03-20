@@ -12,11 +12,11 @@
   ],
   "routes": [
     {
-      "src": "/spotify%20database/index.html",
+      "src": "/spotifydatabase/index.html",
       "dest": "/index.html"
     },
     {
-      "src": "/spotify%20database/(.*)",
+      "src": "/spotifydatabase/(.*)",
       "dest": "/api/$1"
     }
   ]

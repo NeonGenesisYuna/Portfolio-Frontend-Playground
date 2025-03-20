@@ -10,11 +10,11 @@ CORS(app)
 sp = spotipy.Spotify(auth_manager=SpotifyOAuth(
     client_id=os.getenv("f4f4e7428a764f0a9152b6b27a3fc2d8"),
     client_secret=os.getenv("2f735e17f7c9485aa42994895e2de991"),
-    redirect_uri=os.getenv("https://portfolio-frontend-playground.vercel.app/spotify%20database/index.html"),
+    redirect_uri=os.getenv("https://portfolio-frontend-playground.vercel.app/spotifydatabase/index.html"),
     scope="user-library-read user-top-read"
 ))
 
-@app.route('/spotify%20database/top-songs')
+@app.route('/spotifydatabase/top-songs')
 def get_top_songs():
     results = sp.current_user_top_tracks(time_range='short_term', limit=10)
     songs = [
@@ -27,7 +27,7 @@ def get_top_songs():
     ]
     return jsonify(songs)
 
-@app.route('/spotify%20database/top-artists')
+@app.route('/spotifydatabase/top-artists')
 def get_top_artists():
     results = sp.current_user_top_artists(time_range='short_term', limit=10)
     artists = [
