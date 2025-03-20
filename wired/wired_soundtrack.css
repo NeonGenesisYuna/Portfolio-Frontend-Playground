@@ -12,7 +12,7 @@ body {
 .header {
     text-align: center;
     color: white;
-    font-size: clamp(5rem, 4vw, 4vw);
+    font-size: clamp(3rem, 2vw, 6vw);
     font-family: "Arial", sans-serif;
     margin-bottom: -20px;
 }
@@ -20,18 +20,18 @@ body {
 .compose {
     text-align: center;
     color: white;
-    font-size: clamp(3em, 4vw, 4vw);
+    font-size: clamp(2rem, 2vw, 6vw);
     font-family: "Arial", sans-serif;
 }
 
 .playlist {
     max-width: 600px;
     margin: 20px auto;
-    background: #1e1e1e;
+    background-image: url("../imgs/soundtrack-bg.jpg");
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
-    height: 20vh;
+    height: 40vh;
     overflow-y: scroll;
     display: flex;
     flex-direction: column;
@@ -77,7 +77,7 @@ body {
 
 .now-playing {
     margin-top: 20px;
-    display: none;  /* Initially hidden */
+    display: none;
     gap: 20px;
     align-items: center;
     justify-content: center;
