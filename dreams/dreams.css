@@ -1,0 +1,82 @@
+body {
+    background-image: url('../imgs/dante.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+@font-face {
+    font-family: "Vapor Vibes";
+    src: url("../fonts/VaporVibes.otf") format("woff2"),
+    url("../fonts/VaporVibes.otf") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1 {
+    font-family: "Vapor Vibes", sans-serif;
+    color: white;
+    text-align: center;
+    font-size: clamp(2vw, 4vw, 4vw);
+    margin-top: -20px;
+ }
+
+h2, pre {
+    font-family: "Vapor Vibes", sans-serif;
+    color: white;
+    text-align: center;
+    font-size: clamp(1vw, 2vw, 4vw);
+    margin-top: -20px;
+}
+
+.close-button {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 5px;
+    transition: color 0.3s ease;
+}
+
+.close-button:hover {
+    color: red;
+}
+
+#title1{
+    font-family: "Vapor Vibes", sans-serif;
+    color: white;
+    text-align: center;
+    font-size: clamp(2vw, 3.5vw, 4vw);
+    margin-top: 200px;
+}
+
+#title2{
+    font-family: "Vapor Vibes", sans-serif;
+    color: white;
+    text-align: center;
+    font-size: clamp(2vw, 3.5vw, 4vw);
+    margin-top: 200px;
+}
+
+a{
+    font-family: "Vapor Vibes", sans-serif;
+    color: yellow;
+    text-decoration: none;
+}
+
+#galery{
+    display: flex;
+}
+
+.image{
+width: 25vw;
+}
+
+.gallery{
+    display: flex;
+}

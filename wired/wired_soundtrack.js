@@ -79,7 +79,7 @@ function createPlaylist() {
         songElement.classList.add('song');
 
         const songText = document.createElement('span');
-        songText.textContent = `🎵 ${song.name}`;
+        songText.textContent = `Yuna | ${song.name}`;
 
         const playButton = document.createElement('button');
         playButton.textContent = "Play";
