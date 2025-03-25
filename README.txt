@@ -1,8 +1,10 @@
+--Website URL:
+
 As mentioned in the previous exam, ignore the .idea file for the same reasons stated previously.
 
 I will continue working on this site, as I've grown quite interested in webdesign, so that's why some of the sites aren't finished yet.
 
-The folder "topsecret" currently doesn't have anything of note in it, so ignore that one.
+The folder "topsecret" currently doesn't have anything of note in it and also has an old layout, so ignore that one.
 
 The folder "spotifydatabase" was my attempt at trying to display my own spotify data (top songs/artists from the past 4 weeks) on a website with the spotify API
 and a python library (spotipy) which I haven't gotten to work properly yet. However, I've attached a file "readme_attachment.jpg", in which I got it to work with a local flask server.

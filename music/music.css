@@ -16,13 +16,11 @@ body{
     color: white;
     text-align: center;
     font-family: "Josefin Sans", sans-serif;
-    -webkit-text-stroke: 1px purple;
     gap: 0;
 }
 .header h1 {
     color: white;
     font-family: "Josefin Sans", sans-serif;
-    -webkit-text-stroke: 1px purple;
     font-size: clamp(3em, 5vw ,6em);
 }
 
