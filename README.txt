@@ -1,4 +1,4 @@
---Website URL:
+-- Website URL: https://insomnia-network.vercel.app/index.html --
 
 As mentioned in the previous exam, ignore the .idea file for the same reasons stated previously.
 
@@ -41,3 +41,8 @@ Sometimes the scaling on the live site was a bit off, I'm pretty sure I was able
 looks a bit off or doesn't fit the scaling of other elements, I'd maybe recommend checking the site locally.
 
 The whole "Wired" section of the website is hugely inspired by the anime "Serial Experiments Lain" and has this eerie aesthetic on purpose.
+
+Also, don't mind the grammar in the dreams section, I was running on 3 hours of sleep when writing it.
+
+And lastly, the x button in the top left corner of wired-selection sometimes just doesn't work and I have zero idea as to why.
+The link is clearly directed to wired.html which is also in the same folder, so no ../ needed.
