@@ -1,0 +1,19 @@
+body{
+    font-family: "Arial", sans-serif;
+    background-image: url("../imgs/raining_money.gif");
+    background-size: cover;
+    color: white;
+}
+
+h1{
+text-align: center;
+}
+
+.gambling{
+    width: 20vw;
+    margin-right: 80vw;
+}
+
+.gambling img{
+    width: 25vw;
+}
